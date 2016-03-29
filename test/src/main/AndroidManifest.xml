@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?><manifest package="com.apkplug.game.speedsliding.lenovo">
+  <application xmlns:android="http://schemas.android.com/apk/res/android" android:label="@string/app_name" android:name="com.apkplug.game.speedsliding.lenovo.ProxyApplication" android:theme="@style/AppTheme" android:icon="@mipmap/ic_launcher" android:allowBackup="true">
+
+    <activity android:name="com.apkplug.game.speedsliding.lenovo.MainActivity">
+      <intent-filter>
+        <action android:name="android.intent.action.MAIN"/>
+        <category android:name="android.intent.category.LAUNCHER"/>
+      </intent-filter>
+    </activity>
+    <activity android:name="org.apkplug.app.apkplugActivity" android:configChanges="orientation|screenSize|keyboardHidden" android:theme="@android:style/Theme.Translucent.NoTitleBar">
+      <intent-filter>
+        <Action android:name="android.intent.action.MAIN"/>
+      </intent-filter>
+    </activity>
+    <activity android:launchMode="singleTop" android:name=".wxapi.WXPayEntryActivity" android:exported="true"/>
+    <activity android:screenOrientation="portrait" android:name=".LenovoSplashActivty" android:configChanges="keyboardHidden|orientation|screenSize|navigation|locale|layoutDirection" android:theme="@style/AppTheme">
+      <intent-filter>
+        <action android:name="lenovoid.MAIN"/>
+        <category android:name="android.intent.category.DEFAULT"/>
+      </intent-filter>
+    </activity>
+    <service android:name="org.apkplug.app.apkplugService"/>
+    <service android:name="org.openudid.OpenUDID_service">
+      <intent-filter>
+        <Action android:name="org.OpenUDID.GETUDID"/>
+      </intent-filter>
+    </service>
+    <provider android:name="org.apkplug.app.apkplugProvider" android:authorities="com.apkplug.game.speedsliding.lenovo.apkplugprovider"/>
+    <meta-data android:name="payplug_containerid" android:value="yang"/>
+  </application>
+  <uses-permission xmlns:android="http://schemas.android.com/apk/res/android" android:name="android.permission.INTERNET"/>
+  <uses-permission xmlns:android="http://schemas.android.com/apk/res/android" android:name="android.permission.SYSTEM_ALERT_WINDOW"/>
+  <uses-permission xmlns:android="http://schemas.android.com/apk/res/android" android:name="android.permission.ACCESS_NETWORK_STATE"/>
+  <uses-permission xmlns:android="http://schemas.android.com/apk/res/android" android:name="android.permission.ACCESS_WIFI_STATE"/>
+  <uses-permission xmlns:android="http://schemas.android.com/apk/res/android" android:name="android.permission.READ_PHONE_STATE"/>
+  <uses-permission xmlns:android="http://schemas.android.com/apk/res/android" android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+  <uses-permission xmlns:android="http://schemas.android.com/apk/res/android" android:name="android.permission.READ_EXTERNAL_STORAGE"/>
+  <uses-permission xmlns:android="http://schemas.android.com/apk/res/android" android:name="android.permission.RECEIVE_SMS"/>
+  <uses-permission xmlns:android="http://schemas.android.com/apk/res/android" android:name="android.permission.SEND_SMS"/>
+  <uses-permission xmlns:android="http://schemas.android.com/apk/res/android" android:name="android.permission.READ_SMS"/>
+  <uses-permission xmlns:android="http://schemas.android.com/apk/res/android" android:name="android.permission.GET_TASKS"/>
+  <uses-permission xmlns:android="http://schemas.android.com/apk/res/android" android:name="android.permission.GET_ACCOUNTS"/>
+  <uses-permission xmlns:android="http://schemas.android.com/apk/res/android" android:name="android.permission.USE_CREDENTIALS"/>
+  <uses-permission xmlns:android="http://schemas.android.com/apk/res/android" android:name="android.permission.MANAGE_ACCOUNTS"/>
+  <uses-permission xmlns:android="http://schemas.android.com/apk/res/android" android:name="android.permission.AUTHENTICATE_ACCOUNTS"/>
+  <uses-permission xmlns:android="http://schemas.android.com/apk/res/android" android:name="android.permission.CHANGE_NETWORK_STATE"/>
+  <uses-permission xmlns:android="http://schemas.android.com/apk/res/android" android:name="android.permission.CHANGE_WIFI_STATE"/>
+  <uses-permission xmlns:android="http://schemas.android.com/apk/res/android" android:name="android.permission.WRITE_SETTINGS"/>
+  <uses-permission xmlns:android="http://schemas.android.com/apk/res/android" android:name="android.permission.RECORD_AUDIO"/>
+  <uses-permission xmlns:android="http://schemas.android.com/apk/res/android" android:name="android.permission.MESSAGE"/>
+  <uses-permission xmlns:android="http://schemas.android.com/apk/res/android" android:name="android.permission.RECEIVE"/>
+  <uses-permission xmlns:android="http://schemas.android.com/apk/res/android" android:name="android.permission.DOWNLOAD_WITHOUT_NOTIFICATION"/>
+  <uses-permission xmlns:android="http://schemas.android.com/apk/res/android" android:name="android.permission.RESTART_PACKAGES"/>
+  <uses-permission xmlns:android="http://schemas.android.com/apk/res/android" android:name="android.permission.VIBRATE"/>
+  <uses-permission xmlns:android="http://schemas.android.com/apk/res/android" android:name="android.permission.EXPAND_STATUS_BAR"/>
+  <uses-permission xmlns:android="http://schemas.android.com/apk/res/android" android:name="android.permission.ACCESS_COARSE_LOCATION"/>
+  <uses-permission xmlns:android="http://schemas.android.com/apk/res/android" android:name="android.permission.ACCESS_FINE_LOCATION"/>
+  <uses-feature xmlns:android="http://schemas.android.com/apk/res/android" android:name="android.hardware.camera"/>
+  <uses-permission xmlns:android="http://schemas.android.com/apk/res/android" android:name="android.permission.CAMERA"/>
+  <uses-feature xmlns:android="http://schemas.android.com/apk/res/android" android:name="android.hardware.camera.autofocus"/>
+  <uses-permission xmlns:android="http://schemas.android.com/apk/res/android" android:name="android.permission.MOUNT_UNMOUNT_FILESYSTEMS"/>
+  <uses-permission xmlns:android="http://schemas.android.com/apk/res/android" android:name="android.permission.RECORD_VIDEO"/>
+  <uses-permission xmlns:android="http://schemas.android.com/apk/res/android" android:name="com.lenovo.lsf.device.permission.MESSAGE"/>
+  <uses-permission xmlns:android="http://schemas.android.com/apk/res/android" android:name="com.lenovo.lsf.device.permission.RECEIVE"/>
+
+  <uses-permission xmlns:android="http://schemas.android.com/apk/res/android" android:name="android.permission.INTERNET" />
+  <uses-permission xmlns:android="http://schemas.android.com/apk/res/android" android:name="android.permission.ACCESS_NETWORK_STATE" />
+  <uses-permission xmlns:android="http://schemas.android.com/apk/res/android" android:name="android.permission.CHANGE_NETWORK_STATE" />
+  <uses-permission xmlns:android="http://schemas.android.com/apk/res/android" android:name="android.permission.ACCESS_WIFI_STATE"/>
+  <uses-permission xmlns:android="http://schemas.android.com/apk/res/android" android:name="android.permission.READ_PHONE_STATE" />
+
+  <uses-permission xmlns:android="http://schemas.android.com/apk/res/android" android:name="org.simalliance.openmobileapi.SMARTCARD" />
+
+  <uses-permission xmlns:android="http://schemas.android.com/apk/res/android" android:name="android.permission.NFC" />
+</manifest>
