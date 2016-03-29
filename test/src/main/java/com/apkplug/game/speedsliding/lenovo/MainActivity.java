@@ -51,7 +51,7 @@ public class MainActivity extends ActionBarActivity {
         mListView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-                doPay("https://api.payplug.cn",mList.get(position));
+                doPay(Constants.PAY_BASE_URL,mList.get(position));
             }
         });
         Button button = (Button) findViewById(R.id.button);
@@ -79,8 +79,8 @@ public class MainActivity extends ActionBarActivity {
         String time = String.valueOf(System.currentTimeMillis());
         String orderid=dateFormat.format(new Date()) + "000";
         ParamsBuilder pb =new ParamsBuilder();
-        pb.add("app_id", "1PdtD8tsX1S");
-        pb.add("container_id", "yang");
+        pb.add("app_id", Constants.APP_ID);
+        pb.add("container_id", PayManager.getInstance().getContainer());
         pb.add("order_no", orderid);
         pb.add("commodity_id", "1");
         pb.add("amount", "1");
@@ -93,11 +93,11 @@ public class MainActivity extends ActionBarActivity {
         pb.add("description", "chuweitao");
         pb.add("_time", time);
 
-        String str = pb.orderByNameAscending() + "&app_secret=" + "BQgU7lzwobsycXtTWdF6v0NYMVCDf4nm";
+        String str = pb.orderByNameAscending() + "&app_secret=" + Constants.APP_SECRET;
 
         RequestBody formBody = new FormBody.Builder()
-                .add("app_id", "1PdtD8tsX1S")
-                .add("container_id", "yang")
+                .add("app_id", Constants.APP_ID)
+                .add("container_id", PayManager.getInstance().getContainer())
                 .add("order_no", orderid)
                 .add("commodity_id", "1")
                 .add("amount", "1")

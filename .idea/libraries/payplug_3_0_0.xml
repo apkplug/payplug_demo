@@ -1,0 +1,9 @@
+<component name="libraryTable">
+  <library name="payplug-3.0.0">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/test/libs/payplug-3.0.0.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>
